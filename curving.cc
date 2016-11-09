@@ -5,18 +5,22 @@ Curving::Curving(){
 }
 
 // perform a linear curve on grades
-void Curving::linCurve(){
+void Curving::linCurve(int curve, int length){
+	for(int i = 0; i < length; i++)
+		m_curvedGrades[i] = m_originalGrades[i] + curve;
 	
 }
 
 // perform 10*sqrt(g) curve on grades
-void Curving::rootCurve(){
+void Curving::rootCurve(int length){
+    for(int i= 0; i < length; i++)
+	  m_curvedGrades[i] = 10*sqrt(m_originalGrades[i]0;
 	
 }
 
 // returns curved array of grades
 double Curving::returnCurve(){
-	
+	return m_curvedGrades;
 }
 
 // accept or deny changes to grades
